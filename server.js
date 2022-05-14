@@ -31,10 +31,25 @@ function startApp() {
         'Add a department',
         'Add a role',
         'Add an employee',
-        'Update an employee role'
+        'Update an employee role',
       ],
     },
-  ]);
+  ])
+  .then((answer) => {
+    if(answer.toDo === 'View all departments') {
+      viewALLDepartments();
+    } else if(answer.toDo === 'Viw all roles') {
+      viewAllRoles();
+    } else if(answer.toDo === 'View all employees') {
+      viewAllEmployees();
+    } else if(answer.toDo === 'Add a department') {
+      addADepartment();
+    } else if(answer.toDo === 'Add a role') {
+      addARole();
+    } else if(answer.toDo === 'Add an employee') {
+      addAnEmployee();
+    } 
+  })
 };
 
 
