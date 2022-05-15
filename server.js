@@ -52,10 +52,11 @@ function startApp() {
   })
 }
 
+// Selects all data rom departments and console logs them by id and name
 function openDepartment() {
-  var query = "SELECT * FROM departments";
+  const query = "SELECT * FROM departments";
       connection.query(query, function(err, res) {
-          console.log(`Department List:`)
+          console.log(`Department List: `)
         res.forEach(department => {
             console.log(`ID: ${department.id} | Name: ${department.name}`)
         })
@@ -63,5 +64,15 @@ function openDepartment() {
         });
     };
 
+// Selects all data from role and console logs the id, title, salary and department
+function openRole() {
+  const query = "SELECT * FROM roles";
+  connection.query(query, function(err, res) {
+    console.log('Role list: ')
+    res.forEach(role => {
+      console.log(`ID: ${role.id} | Title: ${role.title} | Salary: ${role.salary} | Department ID: ${role.department_id}`);
+    })
+  })
+}
 
 startApp();
