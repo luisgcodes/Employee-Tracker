@@ -50,7 +50,18 @@ function startApp() {
       addAnEmployee();
     } 
   })
-};
+}
+
+function openDepartment() {
+  var query = "SELECT * FROM departments";
+      connection.query(query, function(err, res) {
+          console.log(`Department List:`)
+        res.forEach(department => {
+            console.log(`ID: ${department.id} | Name: ${department.name}`)
+        })
+        startApp();
+        });
+    };
 
 
 startApp();
