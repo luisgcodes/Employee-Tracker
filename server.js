@@ -51,7 +51,7 @@ function startApp() {
       if (answer.choices === 'Add a department') {addDepartment();}
       if (answer.choices === 'Add a role') {addRole();}
       if (answer.choices === 'Update an employee role') {updateEmployee();}
-      if (answer.choices === 'Exit') console.log('SEE YA!'); {con.end();}
+      if (answer.choices === 'Exit') {con.end();} 
     });
 };
 

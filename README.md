@@ -21,6 +21,9 @@ This is a command-line application that will allow you to manage your employees.
  - Inquirer
  - mysql2
 
+ ## Walkthrough 
+<a href="https://drive.google.com/file/d/1pcd0zcMqAAcaeSbt-fnevJhYg7gkTKYL/view" target="_blank">Walkthrough Video</a>
+
 ## License
 
 MIT License
