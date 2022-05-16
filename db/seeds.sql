@@ -1,21 +1,28 @@
 USE employee_db;
 
 -- Departments
-INSERT INTO department (name) VALUES ("Sales");
-INSERT INTO department (name) VALUES ("Human Recources");
-INSERT INTO department (name) VALUES ("Accounting");
-INSERT INTO department (name) VALUES ("Marketing");
+INSERT INTO department (id, dept_name)
+VALUES
+
+(1, 'Sales'),
+(2, 'Human Resources'),
+(3, 'Accounting'),
+(4, 'Marketing');
 
 -- Role
-INSERT INTO role (title, salary, department_id) VALUES ("Data Specialist", 200, 8);
-INSERT INTO role (title, salary, department_id) VALUES ("Receptionist", 100, 6);
-INSERT INTO role (title, salary, department_id) VALUES ("Manager", 80, 2);
-INSERT INTO role (title, salary, department_id) VALUES ("Supervisor", 100, 4);
-INSERT INTO role (title, salary, department_id) VALUES ("Developer", 200, 1);
+INSERT INTO `role` (dept_id, title, salary)
+VALUES
+
+(1, 'Data Specialist', 45000),
+(2, 'Receptionist', 30000),
+(3, 'Manager', 80000),
+(4, 'Supervisor', 65000);
 
 -- Employee
-INSERT INTO employee (first_name, last_name, role_id) VALUES ("Luis", "Samoa", 5);
-INSERT INTO employee (first_name, last_name, role_id) VALUES ("The", "Rock", 4);
-INSERT INTO employee (first_name, last_name, role_id) VALUES ("Anakin", "Skywalker", 3);
-INSERT INTO employee (first_name, last_name, role_id) VALUES ("Obi", "Wan",2);
-INSERT INTO employee (first_name, last_name, role_id) VALUES ("Darth", "Vader", 1);
+INSERT INTO employee (manager_id, first_name, last_name, role_id)
+VALUES
+
+(6, 'Luis', 'Samoa', 2),
+(7, 'Anakin', 'Skywalker', 1),
+(15, 'Obi', 'Wan', 3),
+(4, 'Darth', 'Vader', 4);
